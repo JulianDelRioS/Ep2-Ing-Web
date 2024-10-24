@@ -344,56 +344,56 @@ h1 {
     color: #1370ac;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 828px) {
     header {
-        margin-bottom: 3px; /* Reduce el espacio entre el header y el formulario */
+        margin-bottom: 5px; /* Aumenta el espacio entre el header y el formulario */
     }
 
     h1 {
-        font-size: 50px; /* Reduce el tamaño del texto */
-        margin-right: 5px; /* Espacio entre el título y el icono */
-        margin-bottom: 5px; /* Ajusta el margen inferior */
-        margin-top: 5px; /* Ajusta el margen superior */
+        font-size: 90px; /* Aumenta el tamaño del texto */
+        margin-right: 15px; /* Aumenta el espacio entre el título y el icono */
+        margin-bottom: 15px; /* Ajusta el margen inferior */
+        margin-top: 15px; /* Ajusta el margen superior */
         text-align: center; /* Centra el texto del encabezado */
     }
 
     .icono {
-        width: 80px; /* Ajusta el tamaño de la imagen */
-        height: 80px; /* Ajusta la altura de la imagen */
+        width: 150px; /* Aumenta el tamaño de la imagen */
+        height: 150px; /* Aumenta la altura de la imagen */
         display: block; /* Cambia a block para centrarlo */
         margin: 0 auto; /* Centra el icono horizontalmente */
     }
 
     .formulario {
-        width: 70%; /* Cambia el ancho del formulario */
-        max-width: 400px; /* Opcional: establece un ancho máximo para el formulario */
-        padding: 20px; /* Ajusta el padding */
+        width: 100%; /* Aumenta el ancho del formulario */
+        max-width: 600px; /* Establece un ancho máximo para el formulario */
+        padding: 40px; /* Aumenta el padding */
         margin: 0 auto; /* Centra el formulario horizontalmente */
         position: relative; /* Establece posición relativa para el margen superior */
         top: 10px; /* Ajusta el margen superior para mover el formulario hacia abajo */
     }
 
     .formulario form {
-        padding: 20px; /* Ajusta el padding del formulario */
+        padding: 40px; /* Aumenta el padding del formulario */
     }
 
     .username, .password {
-        margin: 10px 0; /* Reduce el margen entre los campos */
+        margin: 20px 0; /* Aumenta el margen entre los campos */
     }
 
     .loginButton, .registerButton {
-        height: 35px; /* Reduce la altura de los botones */
-        font-size: 14px; /* Reduce el tamaño de la fuente */
+        height: 60px; /* Aumenta la altura de los botones */
+        font-size: 22px; /* Aumenta el tamaño de la fuente */
     }
     
     /* Estilos para el formulario de registro */
     .formulario.register {
-        width: 70%; /* Asegúrate que sea el mismo ancho que el formulario de inicio de sesión */
-        max-width: 400px; /* Ancho máximo */
-        margin: 10px auto; /* Espacio superior para separarlo del encabezado */
+        width: 100%; /* Asegúrate que sea el mismo ancho que el formulario de inicio de sesión */
+        max-width: 600px; /* Ancho máximo */
+        margin: 15px auto; /* Espacio superior para separarlo del encabezado */
     }
 
     .formulario.register form {
-        padding: 20px; /* Igual que el formulario de inicio de sesión */
+        padding: 40px; /* Igual que el formulario de inicio de sesión */
     }
 }

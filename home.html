@@ -6,7 +6,6 @@
     <title>Inicio - MarketLink</title>
     <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <header>
@@ -15,8 +14,6 @@
             <a href="home.html">
                 <img src="https://cdn-icons-png.flaticon.com/512/281/281397.png" alt="MarketLink" class="logo">
             </a>
-            <!-- Botón para mostrar el menú hamburguesa -->
-            <button id="menuToggle" class="menu-btn">☰</button>
             <!-- Botón para publicar un producto -->
             <button id="showUploadFormBtn" class="upload-btn">Publicar un producto</button>
 
@@ -45,23 +42,30 @@
                 <button id="logoutBtn" class="logout-btn" style="display:none;">Cerrar Sesión</button>
             </div>
         </nav>
-        <!-- Menú hamburguesa (oculto por defecto) -->
-        <div id="hamburgerMenu" class="hamburger-menu" style="display: none;">
-            <ul>
-                <li><button id="showUploadFormBtnHamburger">Publicar producto</button></li>
-                <li><button id="showCategoriesHamburger">Categorías</button></li>
-                <li><button id="showAllProductsBtnHamburger">Mostrar todos los productos</button></li>
-                <li><button id="loginBtnHamburger">Iniciar sesión</button></li>
-                <li><button id="logoutBtnHamburger">Cerrar sesión</button></li>
-            </ul>
-        </div>
     </header>
 
     <main>
-        <!-- Sección de bienvenida -->
-        <section>
-            <h2>Bienvenido a MarketLink</h2>
-        </section>
+        <!-- Botón para mostrar el menú hamburguesa -->
+        <button id="menuToggle" class="menu-btn">☰</button>
+
+    <!-- Menú hamburguesa (oculto por defecto) -->
+    <div id="hamburgerMenu" class="hamburger-menu" style="display: none;">
+        <ul>
+            <li><button id="showUploadFormBtnHamburger">Publicar producto</button></li>
+            <li>
+                <button id="showCategoriesHamburger">Categorías</button>
+                <ul class="subcategory-menu" style="display: none;">
+                    <li><a href="#" class="category-link" data-category="electronics">Electrónica</a></li>
+                    <li><a href="#" class="category-link" data-category="clothing">Ropa</a></li>
+                    <li><a href="#" class="category-link" data-category="home">Hogar</a></li>
+                    <!-- Otras categorías -->
+                </ul>
+            </li>
+            <li><button id="showAllProductsBtnHamburger">Mostrar todos los productos</button></li>
+            <li><button id="loginBtnHamburger">Iniciar sesión</button></li>
+            <li><button id="logoutBtnHamburger">Cerrar sesión</button></li>
+        </ul>
+    </div>
 
         <!-- Contenedor de productos subidos -->
         <div class="products-content" id="products-section">

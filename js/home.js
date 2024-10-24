@@ -168,7 +168,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const filteredProducts = products.filter(product => product.category === category);
         renderProducts(filteredProducts);
     }
-
+    // Añadir lógica al botón de categorías en el menú hamburguesa
+    document.querySelectorAll('.hamburger-category-link').forEach(categoryLink => {
+        categoryLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const category = this.getAttribute('data-category');
+            filterProductsByCategory(category); // Filtrar productos
+            closeHamburgerMenu(); // Cerrar el menú hamburguesa después de seleccionar la categoría
+        });
+    });
     // Manejar la selección de categorías
     document.querySelectorAll('.categories-content a').forEach(categoryLink => {
         categoryLink.addEventListener('click', function(e) {
@@ -183,7 +191,13 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch('productos.json') // Cambia la ruta si es necesario
             .then(response => response.json())
             .then(jsonProducts => {
-                products = [...products, ...jsonProducts]; // Combinar productos de localStorage y JSON
+                // Evitar duplicación de productos
+                const filteredProducts = jsonProducts.filter(jsonProduct => {
+                    return !products.some(storedProduct => storedProduct.name === jsonProduct.name);
+                });
+
+                products = [...products, ...filteredProducts]; // Combinar productos sin duplicados
+                localStorage.setItem('products', JSON.stringify(products)); // Actualizar localStorage
                 renderProducts(products); // Renderizar productos combinados
             })
             .catch(error => console.error('Error cargando el archivo JSON:', error));
@@ -224,5 +238,4 @@ document.addEventListener('DOMContentLoaded', function() {
         redirectTo('login.html');
         closeHamburgerMenu();
     });
-    
 });
