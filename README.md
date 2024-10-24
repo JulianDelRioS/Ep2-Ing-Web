@@ -24,3 +24,4 @@ contraseña: admin123
 
 ##ENTREGA PARCIAL 2
 EP2.2 Logramos hacer lectura desde un archivo json local para productos y estos se muestran en la pantalla home.html.
+EP2.4.Logramos que todas las pantallas sean responsivas, logramos un patron de diseño distinto en el home.html, en el caso de telefonos celulares(828x1792px)tenemos un menu hamburguesa en vez de una barra navegadora y los productos ya no se muestran en filas de a 4 productos sino que en filas de a 2 productos.
