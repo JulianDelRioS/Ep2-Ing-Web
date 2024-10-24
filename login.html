@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Añadida la etiqueta meta viewport -->
+    <title>MarketLink - Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>MarketLink</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281397.png" alt="Icono de MarketLink" class="icono">
+    </header>
+    <div class="formulario login">
+        <h2>Inicio de Sesión</h2>
+
+        <form id="loginForm"> <!-- Se añade un ID para capturar el evento en el script -->
+            <div class="username">
+                <input type="text" name="username" placeholder="Usuario o correo electrónico" required>
+            </div>
+            <div class="password">
+                <input type="password" name="password" placeholder="Contraseña" required>
+            </div>
+
+            <button class="loginButton" type="submit">Iniciar sesión</button>
+
+            <div class="olvido">
+                ¿Olvidaste tu contraseña?
+            </div>
+
+            <div class="separador">
+                <div class="linea"></div>
+            </div>
+            
+            <div class="registerButton">
+                <a href="registro.html">Crear cuenta nueva</a>
+            </div>
+        </form>
+    </div>
+    
+    <script src="js/login.js" defer></script> <!-- Asegúrate de que el script esté cargado -->
+</body>
+</html>

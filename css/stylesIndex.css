@@ -1,0 +1,177 @@
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif; /* Fuente Playfair Display */
+    background: url('https://plus.unsplash.com/premium_photo-1682090260563-191f8160ca48?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZW50cmVnYXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+    color: #333; /* Color del texto predeterminado */
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #003366; /* Azul oscuro para contraste */
+    color: white;
+    z-index: 1000;
+}
+
+h1 {
+    margin: 0;
+    margin-right: 10px;
+    font-size: 2.5em; /* Tamaño de fuente para h1 */
+    color: white; /* Color blanco para h1 en el header */
+}
+
+.icono {
+    width: 50px;
+    height: 50px;
+}
+
+.auth-links {
+    margin-left: auto;
+}
+
+.auto-link {
+    color: white; /* Cambiar el color de texto de los enlaces a blanco */
+    text-decoration: none;
+    font-size: 16px; /* Tamaño de fuente para los enlaces */
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auto-link:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #44a7f9; /* Color de texto en hover */
+}
+
+/* Hero Section */
+.hero {
+    background: none; /* Quitar el fondo de la hero para usar la imagen de fondo general */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 80px; /* Asegurar que el contenido no se oculte debajo del header fijo */
+}
+
+.hero h2 {
+    font-size: 4em; /* Tamaño de fuente para h2 en la hero */
+    margin: 0;
+    color: #003366; /* Color azul del header */
+    font-weight: 700; /* Peso de fuente para h2 */
+}
+
+.hero-description {
+    color: black; /* Color negro del nuevo párrafo */
+    margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+    font-size: 1.5em; /* Tamaño de fuente para el párrafo adicional */
+    font-weight: 400; /* Peso de fuente para el párrafo */
+}
+
+.hero .cta-btn {
+    padding: 15px 30px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 1.2em; /* Tamaño de fuente del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta-btn:hover {
+    background-color: #ff4500;
+}
+
+/* Sección de categorías */
+.categories {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+    margin-top: 80px; /* Espacio debajo del header fijo */
+}
+
+.categories h2 {
+    font-size: 2.5em; /* Tamaño de fuente para h2 en categorías */
+    margin-bottom: 30px;
+    color: #003366; /* Color azul para h2 */
+    font-weight: 700; /* Peso de fuente para h2 */
+}
+
+.category-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.category-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category-card h3 {
+    margin-top: 15px;
+    font-size: 1.5em; /* Tamaño de fuente para h3 en tarjetas */
+    color: #333; /* Color gris oscuro para h3 */
+    font-weight: 700; /* Peso de fuente para h3 */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-link img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* Logos de redes sociales */
+.social-link[href*="instagram"] img {
+    background-color: #E1306C; /* Color de fondo de Instagram */
+    border-radius: 50%;
+    padding: 5px; /* Padding para simular el color de fondo en el logo */
+}
+
+.social-link[href*="facebook"] img {
+    background-color: #3b5998; /* Color de fondo de Facebook */
+    border-radius: 50%;
+    padding: 5px; /* Padding para simular el color de fondo en el logo */
+}

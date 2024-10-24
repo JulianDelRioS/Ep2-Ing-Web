@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - MarketLink</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>MarketLink</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281397.png" alt="Icono de MarketLink" class="icono">
+    </header>
+
+    <div class="formulario registro">
+        <h2>Registro de Usuario</h2>
+
+        <form id="registerForm" method="post">
+            <div class="username">
+                <input type="text" name="username" placeholder="Nombre de usuario" required>
+            </div>
+            <div class="Rut">
+                <input type="text" name="Rut" placeholder="Rut (12345678-9)" required>
+            </div>
+            <div class="email">
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="password">
+                <input type="password" name="password" placeholder="Contraseña" required>
+            </div>
+            <div class="confirm-password">
+                <input type="password" name="confirm_password" placeholder="Confirmar contraseña" required>
+            </div>
+            <div class="birthdate">
+                <select id="day" name="day" required>
+                    <option value="" disabled selected>Día</option>
+                    <script>
+                        for (let i = 1; i <= 31; i++) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                </select>
+
+                <select id="month" name="month" required>
+                    <option value="" disabled selected>Mes</option>
+                    <script>
+                        const months = [
+                            { value: 1, name: "Enero" },
+                            { value: 2, name: "Febrero" },
+                            { value: 3, name: "Marzo" },
+                            { value: 4, name: "Abril" },
+                            { value: 5, name: "Mayo" },
+                            { value: 6, name: "Junio" },
+                            { value: 7, name: "Julio" },
+                            { value: 8, name: "Agosto" },
+                            { value: 9, name: "Septiembre" },
+                            { value: 10, name: "Octubre" },
+                            { value: 11, name: "Noviembre" },
+                            { value: 12, name: "Diciembre" }
+                        ];
+                        months.forEach(month => {
+                            document.write(`<option value="${month.value}">${month.name}</option>`);
+                        });
+                    </script>
+                </select>
+
+                <select id="year" name="year" required>
+                    <option value="" disabled selected>Año</option>
+                    <script>
+                        const currentYear = new Date().getFullYear();
+                        for (let i = currentYear; i >= 1900; i--) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                </select>
+            </div>
+            <div class="ubicacion">
+                <div class="vivienda">
+                    <select id="region" name="region" required onchange="cargarComunas()">
+                        <option value="" disabled selected>Región</option>
+                        <option value="1">Arica y Parinacota</option>
+                        <option value="2">Tarapacá</option>
+                        <option value="3">Antofagasta</option>
+                        <option value="4">Atacama</option>
+                        <option value="5">Coquimbo</option>
+                        <option value="6">Valparaíso</option>
+                        <option value="7">Región Metropolitana</option>
+                        <option value="8">O'Higgins</option>
+                        <option value="9">Maule</option>
+                        <option value="10">Biobío</option>
+                        <option value="11">La Araucanía</option>
+                        <option value="12">Los Ríos</option>
+                        <option value="13">Los Lagos</option>
+                        <option value="14">Aysén</option>
+                        <option value="15">Magallanes y de la Antártica Chilena</option>
+                    </select>
+                </div>
+                <div class="comuna">
+                    <select id="comuna" name="comuna" required>
+                        <option value="" disabled selected>Comuna</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="registerButton" type="submit">Registrarse</button>
+
+            <div class="separador">
+                <div class="linea"></div>
+            </div>
+
+            <div class="loginRedirect">
+                <a href="login.html">Ya tengo una cuenta. Iniciar sesión</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Enlaza el archivo JavaScript al final del body -->
+    <script src="js/register.js" defer></script>
+
+    <script>
+        // Función para cargar comunas según la región seleccionada
+        function cargarComunas() {
+            const regionSelect = document.getElementById('region');
+            const comunaSelect = document.getElementById('comuna');
+            const region = regionSelect.value;
+            comunaSelect.innerHTML = '<option value="" disabled selected>Comuna</option>'; // Limpiar comunas anteriores
+
+            const comunas = {
+                "1": ["Arica", "Camarones", "Putre", "General Lagos"],
+                "2": ["Iquique", "Alto Hospicio", "Camiña", "Colchane", "Huara", "Pica"],
+                "3": ["Antofagasta", "Mejillones", "Tocopilla", "Calama", "San Pedro de Atacama", "Sierra Gorda", "Maria Elena"],
+                "4": ["Copiapó", "Caldera", "Tierra Amarilla", "Chañaral", "Diego de Almagro", "Freirina", "Huasco"],
+                "5": ["La Serena", "Coquimbo", "Vicuña", "Andacollo", "La Higuera", "Paiguano", "Illapel", "Los Vilos", "Salamanca", "Canela", "Ovalle", "Río Hurtado"],
+                "6": ["Valparaíso", "Viña del Mar", "Quilpué", "San Antonio", "San Felipe", "Los Andes", "Puchuncaví", "Concón", "Casablanca", "Zapallar", "Petorca", "La Ligua", "Olmué", "Limache"],
+                "7": ["Santiago", "Pudahuel", "Maipú", "Las Condes", "La Florida", "Peñalolén", "Ñuñoa", "Providencia", "Macul", "San Joaquín", "El Bosque", "Cerro Navia", "Renca", "Independencia", "Huechuraba", "Vitacura", "Lo Barnechea", "Lo Prado", "San Miguel", "San Ramón"],
+                "8": ["Rancagua", "Machalí", "Pichilemu", "San Fernando", "Santa Cruz", "Requínoa", "Codegua", "Cunaco", "Graneros", "Palmilla", "Mostazal", "Coltauco", "Las Cabras", "Pangupulli", "San Vicente de Tagua Tagua"],
+                "9": ["Talca", "Maule", "Constitución", "Curicó", "Linares", "San Javier", "Cauquenes", "Colbún", "Villa Alegre", "Río Claro"],
+                "10": ["Concepción", "Talcahuano", "San Pedro de la Paz", "Chiguayante", "Hualpén", "Penco", "Tomé", "Coronel", "Lota", "San Rosendo", "Florida", "Dicho", "Hualqui", "Santa Juana"],
+                "11": ["Temuco", "Padre Las Casas", "Villarrica", "Pucón", "Freire", "Toltén", "Cunco", "Gorbea", "Lautaro", "Cholchol"],
+                "12": ["Valdivia", "Los Lagos", "La Unión", "Río Bueno", "Paillaco", "Lago Ranco", "Futrono", "Corral"],
+                "13": ["Coyhaique", "Aysén", "Chile Chico", "Cerro Castillo", "Lago Verde", "Puyuhuapi", "Rio Ibáñez"],
+                "14": ["Punta Arenas", "Puerto Natales", "Porvenir", "Cabo de Hornos", "Laguna Blanca"],
+                "15": ["Puerto Williams", "Cabo de Hornos"]
+            };
+
+            if (comunas[region]) {
+                comunas[region].forEach(comuna => {
+                    comunaSelect.innerHTML += `<option value="${comuna}">${comuna}</option>`;
+                });
+            }
+        }
+    </script>
+</body>
+</html>

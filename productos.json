@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop HP",
+        "price": 450000,
+        "category": "electronica",
+        "description": "Laptop HP con 8GB de RAM y 256GB SSD.",
+        "images": [
+            "https://d1pc5hp1w29h96.cloudfront.net/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/8/2/827B1LA-1_T1694733380.png",
+            "https://example.com/images/laptop_hp_2.jpg",
+            "https://example.com/images/laptop_hp_3.jpg"
+        ],
+        "region": "Región Metropolitana",
+        "commune": "Santiago",
+        "userId": 1
+    },
+    {
+        "id": 2,
+        "name": "Teléfono Samsung Galaxy",
+        "price": 300000,
+        "category": "electronica",
+        "description": "Teléfono Samsung Galaxy con pantalla de 6.5 pulgadas.",
+        "images": [
+            "https://www.abcdin.cl/dw/image/v2/BCPP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw48826d03/images/large/27359779.jpg?sw=1200&sh=1200&sm=fit",
+            "https://example.com/images/galaxy_2.jpg",
+            "https://example.com/images/galaxy_3.jpg"
+        ],
+        "region": "Región Valparaíso",
+        "commune": "Viña del Mar",
+        "userId": 2
+    },
+    {
+        "id": 3,
+        "name": "Silla de Oficina",
+        "price": 75000,
+        "category": "hogar",
+        "description": "Silla ergonómica ideal para oficina.",
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3TCr7IGEalOOC-rI_AHP-yXavpjz11WWwwQ&s",
+            "https://example.com/images/silla_oficina_2.jpg",
+            "https://example.com/images/silla_oficina_3.jpg"
+        ],
+        "region": "Región Metropolitana",
+        "commune": "Las Condes",
+        "userId": 3
+    },
+    {
+        "id": 4,
+        "name": "Juego de Sábanas",
+        "price": 30000,
+        "category": "hogar",
+        "description": "Juego de sábanas de 2 plazas.",
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBASvThKY76NITiz3d1tSFd3GC48s2-rPVlQ&s",
+            "https://example.com/images/sabanas_2.jpg",
+            "https://example.com/images/sabanas_3.jpg"
+        ],
+        "region": "Región Metropolitana",
+        "commune": "Santiago",
+        "userId": 1
+    },
+    {
+        "id": 5,
+        "name": "Cámara Canon",
+        "price": 450000,
+        "category": "electronica",
+        "description": "Cámara Canon con lente 18-55mm.",
+        "images": [
+            "https://www.canontiendaonline.cl/wcsstore/cch/es_CL/marketing/cc-web-development/eos-rebel-sl3/eos-rebel-sl3_product_cchi.png",
+            "https://example.com/images/camara_canon_2.jpg",
+            "https://example.com/images/camara_canon_3.jpg"
+        ],
+        "region": "Región Metropolitana",
+        "commune": "Santiago",
+        "userId": 2
+    },
+    {
+        "id": 6,
+        "name": "Bicicleta Mountain",
+        "price": 120000,
+        "category": "hogar",
+        "description": "Bicicleta de montaña con cambios.",
+        "images": [
+            "https://i.btcdn.co/r/czozNzAwLGc6MTAwMHg/bcce8be9/883926-1625050-2.jpg",
+            "https://example.com/images/bicicleta_2.jpg",
+            "https://example.com/images/bicicleta_3.jpg"
+        ],
+        "region": "Región Metropolitana",
+        "commune": "Santiago",
+        "userId": 3
+    },
+    {
+        "id": 7,
+        "name": "Zapatos Nike",
+        "price": 80000,
+        "category": "ropa",
+        "description": "Zapatos deportivos Nike en buen estado.",
+        "images": [
+            "https://nikeclprod.vtexassets.com/arquivos/ids/282042/DD1869_103_A_PREM.jpg?v=637780313855500000",
+            "https://example.com/images/zapatos_nike_2.jpg",
+            "https://example.com/images/zapatos_nike_3.jpg"
+        ],
+        "region": "Región Metropolitana",
+        "commune": "Santiago",
+        "userId": 1
+    },
+    {
+        "id": 8,
+        "name": "Cafetera",
+        "price": 25000,
+        "category": "electronica",
+        "description": "Cafetera eléctrica con jarra de vidrio.",
+        "images": [
+            "https://ostercl.vtexassets.com/arquivos/ids/159166-800-auto?v=637492712734130000&width=800&height=auto&aspect=true",
+            "https://example.com/images/cafetera_2.jpg",
+            "https://example.com/images/cafetera_3.jpg"
+        ],
+        "region": "Región Metropolitana",
+        "commune": "Santiago",
+        "userId": 2
+    },
+    {
+        "id": 9,
+        "name": "Libro de Programación",
+        "price": 15000,
+        "category": "electronica",
+        "description": "Libro sobre programación en JavaScript.",
+        "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYFnM-TXNQqIKdVChKuJuQSWF3gky1gKS2uw&s",
+            "https://example.com/images/libro_programacion_2.jpg",
+            "https://example.com/images/libro_programacion_3.jpg"
+        ],
+        "region": "Región Metropolitana",
+        "commune": "Santiago",
+        "userId": 3
+    },
+    {
+        "id": 10,
+        "name": "Escuadra y Compás",
+        "price": 10000,
+        "category": "hogar",
+        "description": "Juego de escuadra y compás para estudiantes.",
+        "images": [
+            "https://media.istockphoto.com/id/134096766/es/foto/conjunto-de-matem%C3%A1ticas.jpg?s=612x612&w=0&k=20&c=_gc4jkmo81GsHhVo_yu7jnxzeVWCVYyldDmzpavI1b8=",
+            "https://example.com/images/escuadra_compas_2.jpg",
+            "https://example.com/images/escuadra_compas_3.jpg"
+        ],
+        "region": "Región Metropolitana",
+        "commune": "Santiago",
+        "userId": 1
+    }
+]

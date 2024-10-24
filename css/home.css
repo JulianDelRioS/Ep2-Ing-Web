@@ -1,0 +1,402 @@
+/* Fondo y estilos generales de la página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(150deg, #1370ac, #44a7f9);
+    min-height: 100vh; /* Cambiar a min-height para permitir que la página se estire */
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 80px;
+    color: white;
+}
+
+/* Estilo para el header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 0 20px;
+    background-color: #1370ac;
+}
+
+/* Estilo para el logo */
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    background-color: #1370ac;
+}
+
+/* Barra de búsqueda centrada */
+.search-container {
+    flex: 1;
+    text-align: center;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-bar::placeholder {
+    color: #888;
+}
+
+/* Menú desplegable lateral para categorías */
+.dropdown-categories {
+    position: relative;
+    display: inline-block;
+}
+
+.categories-btn {
+    background-color: white;
+    color: #1370ac;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.categories-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 200px;
+}
+
+.categories-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.categories-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-categories:hover .categories-content {
+    display: block;
+}
+
+/* Opciones de usuario */
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.user-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+#loginBtn {
+    background-color: #fff;
+    color: #1370ac;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#loginBtn:hover {
+    background-color: #1370ac;
+    color: #fff;
+}
+
+.upload-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+}
+
+.upload-btn:hover {
+    background-color: #218838;
+}
+
+/* Estilo para el formulario de agregar producto */
+#upload-section {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+#upload-section h3 {
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    color: #1370ac;
+}
+
+#uploadProductForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#uploadProductForm .form-group {
+    margin-bottom: 15px;
+}
+
+#uploadProductForm label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#uploadProductForm input[type="text"],
+#uploadProductForm input[type="number"],
+#uploadProductForm input[type="file"],
+#uploadProductForm textarea,
+#uploadProductForm select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #adadad;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#uploadProductForm textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+#uploadProductForm select {
+    background-color: #fff;
+}
+
+#uploadProductForm button[type="submit"] {
+    background-color: #1370ac;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#uploadProductForm button[type="submit"]:hover {
+    background-color: #105a85;
+}
+
+/* Estilo para el botón "Mostrar todos los productos" */
+.show-all-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.show-all-btn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown-categories,
+.show-all-btn {
+    margin: 0 10px;
+}
+
+/* Contenedor de productos */
+.products-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los productos se envuelvan en filas */
+    justify-content: space-between; /* Espaciado entre los elementos */
+}
+
+/* Contenedor de productos */
+
+#productsList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 columnas de igual tamaño */
+    gap: 4px; /* Reduce el espacio entre los productos a 4px */
+    margin: 20px; /* Margen alrededor del contenedor */
+}
+
+
+
+
+
+
+/* Ajustar la imagen del producto al contenedor */
+.product-item img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto; /* Mantendrá la proporción original de la imagen */
+    max-height: 200px; /* Limitar la altura máxima de la imagen */
+    object-fit: cover; /* Asegura que la imagen se recorte para ajustarse al espacio sin distorsión */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+}
+/* Estilos para cada producto */
+.product-item {
+    width: 180px; /* Ajustar el ancho del producto para acercar columnas */
+    background-color: white;
+    border-radius: 10px;
+    height: 300px; /* Altura fija para todos los productos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5px; /* Disminuir el margen entre productos */
+    text-align: center;
+    padding: 10px;
+}
+
+.product-item h4 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.product-item p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Estilos para las opciones de usuario */
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.logout-btn {
+    background-color: #dc3545; /* Rojo para indicar peligro o advertencia */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.logout-btn:hover {
+    background-color: #c82333; /* Color de fondo al pasar el cursor */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+}
+
+
+/* Estilos generales para dispositivos móviles */
+@media (max-width: 768px) {
+    h1 {
+        display: none; /* Ocultar el h1 en pantallas pequeñas */
+    }
+    /* Ajustes para el header */
+    header {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda */
+        padding: 10px; /* Ajustar el padding */
+        box-shadow: none; /* Quitar la sombra en móviles */
+    }
+
+    /* Ocultar la barra de navegación en dispositivos móviles */
+    .navbar {
+        display: none; /* Ocultar la barra de navegación */
+    }
+
+    /* Mostrar el menú hamburguesa solo en pantallas móviles */
+    .hamburger-menu {
+        display: block; /* Asegurarse de que se muestre el ícono */
+    }
+
+    /* Ajustar la barra de búsqueda */
+    .search-container {
+        width: 100%; /* Hacer que ocupe todo el ancho */
+        margin-bottom: 10px; /* Espacio entre la barra de búsqueda y otros elementos */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .search-bar {
+        width: 90%; /* Ajustar el ancho de la barra de búsqueda */
+        padding: 12px; /* Aumentar el padding */
+        font-size: 16px; /* Mantener un tamaño de fuente legible */
+    }
+
+    /* Ajustes para el contenedor de productos */
+    .products-container {
+        display: flex;
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Alinear al centro */
+        padding: 10px; /* Añadir padding */
+    }
+
+    /* Ajustes para cada producto */
+    .product-item {
+        width: 90%; /* Hacer que los productos ocupen el 90% del ancho */
+        margin: 10px 0; /* Espacio entre productos */
+        padding: 15px; /* Añadir padding a los productos */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para mejorar el diseño */
+        border-radius: 8px; /* Bordes redondeados */
+    }
+
+    /* Ajustar el formulario de agregar producto */
+    #upload-section {
+        width: 90%; /* Ajustar el ancho del formulario */
+        margin: 0 auto; /* Centrar el formulario */
+        padding: 20px; /* Añadir padding */
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    #uploadProductForm input[type="text"],
+    #uploadProductForm input[type="number"],
+    #uploadProductForm input[type="file"],
+    #uploadProductForm textarea,
+    #uploadProductForm select {
+        font-size: 16px; /* Tamaño de fuente adecuado */
+        padding: 10px; /* Padding adecuado */
+    }
+
+    /* Ajustar el tamaño de los botones */
+    #uploadProductForm button[type="submit"],
+    .upload-btn,
+    .logout-btn,
+    #loginBtn,
+    .show-all-btn {
+        width: 100%; /* Botones ocupen todo el ancho */
+        padding: 15px; /* Aumentar el padding para mejor clicabilidad */
+        font-size: 16px; /* Tamaño de fuente legible */
+        border-radius: 5px; /* Bordes redondeados */
+        margin: 10px 0; /* Espacio entre botones */
+    }
+}
+

@@ -1,0 +1,134 @@
+/* estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #44a7f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* contenedor de los detalles del producto */
+#productDetails {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Ampliar el ancho máximo para usar más espacio */
+    margin: 0 auto;
+    display: flex; /* Usar flexbox para el diseño */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
+}
+
+/* estilo del contenedor de carrusel */
+.carousel-container {
+    flex: 1 1 50%; /* Ocupa la mitad del espacio disponible */
+    display: flex;
+    justify-content: center; /* Centrar las imágenes */
+    align-items: center; /* Centrar verticalmente */
+    overflow: hidden; /* Ocultar el desbordamiento */
+    padding: 10px; /* Agregar espacio alrededor del carrusel */
+    position: relative; /* Para posicionar los botones de navegación */
+}
+
+/* estilo del carrusel */
+.carousel {
+    display: flex; /* Mostrar imágenes en fila */
+    transition: transform 0.5s ease; /* Transición suave */
+    width: 100%; /* Ajustar el ancho del carrusel */
+}
+
+/* estilo de las imágenes del producto */
+.product-image {
+    border-radius: 10px; /* Bordes redondeados más pronunciados */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    margin: 0 5px; /* Espacio entre imágenes */
+    max-width: 90%; /* Ajustar al tamaño máximo */
+    height: auto; /* Mantener la relación de aspecto */
+    max-height: 300px; /* Limitar la altura de las imágenes para que sean más grandes */
+}
+
+/* hover sobre las imágenes */
+.product-image:hover {
+    transform: scale(1.1); /* Aumentar un poco más el zoom */
+}
+
+/* estilo de los botones de navegación */
+.carousel-button {
+    position: absolute; /* Posicionar los botones en el contenedor */
+    top: 50%; /* Centrarlos verticalmente */
+    transform: translateY(-50%); /* Ajustar el centro del botón */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Botones redondeados */
+    cursor: pointer; /* Cambiar cursor a puntero */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1; /* Asegurar que los botones estén por encima */
+    transition: background-color 0.3s; /* Transición de color */
+}
+
+/* Estilo para los botones prev y next */
+.carousel-button.prev {
+    left: 10px; /* Alinear a la izquierda */
+}
+
+.carousel-button.next {
+    right: 10px; /* Alinear a la derecha */
+}
+
+/* Hover sobre los botones */
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Cambiar a blanco en hover */
+}
+
+/* estilo de la sección de información del producto */
+.product-info {
+    flex: 1 1 50%; /* Ocupa la otra mitad del espacio disponible */
+    padding: 20px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+/* estilo del título del producto */
+.product-info h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+/* estilo del precio */
+.product-info p strong {
+    color: #555;
+    font-weight: bold;
+}
+
+.product-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    #productDetails {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        padding: 15px;
+    }
+
+    .carousel-container, .product-info {
+        flex: 1 1 100%; /* Cada sección ocupa todo el ancho */
+        margin-bottom: 20px; /* Espacio entre secciones */
+    }
+
+    .product-info h1 {
+        font-size: 1.5em;
+    }
+
+    .product-info p {
+        font-size: 1em;
+    }
+
+    .product-image {
+        width: 100%; /* Imágenes ocupan el 100% del contenedor */
+        margin: 0; /* Sin margen para imagen */
+        max-height: 200px; /* Limitar la altura de las imágenes para móviles */
+    }
+}
